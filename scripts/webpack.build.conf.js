@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const pwd = process.cwd();
 const path = require('path');
 const conf = require('./webpack.base.config.js');
+const autoprefixer = require('autoprefixer');
 
 conf.devtool = 'source-map';
 conf.entry = {
@@ -18,22 +19,17 @@ conf.ts = {
 };
 
 // Style Loaders
-conf.module.loaders = conf.module.loaders.concat([
+conf.module.loaders = [
     {
         test: /apigee\.less$/,
-        loader: 'apigee-style!less'
+        loader: 'apigee-style!postcss-loader!less'
     },
     {
         test: /apigee-base\.less$/,
-        loader: 'apigee-base-style!less'
+        loader: 'apigee-base-style!postcss-loader!less'
     }
-]);
+].concat(conf.module.loaders);
 
-conf.resolveLoader = {
-    alias: {
-        "apigee-style": path.resolve(pwd, "./scripts/apigee-style-loader.js"),
-        "apigee-base-style": path.resolve(pwd, "./scripts/apigee-base-style-loader.js")
-    }
-};
+conf.postcss = [ autoprefixer({ browsers: ['last 2 versions'] }) ];
 
 module.exports = conf;

@@ -12,7 +12,8 @@
     "noImplicitAny": false,
     "declaration": true,
     "rootDir": "src",
-    "outDir": "build"
+    "outDir": "build",
+    "lib": ["es6"]
   },
   "exclude": [
     "node_modules",

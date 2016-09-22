@@ -1,0 +1,43 @@
+@import "colors";
+
+body {
+  color: @color-tungsten;
+  background-color: @color-smoke;
+}
+#ALM-sidebar {
+  border-right-color: @color-stone;
+}
+
+.app-view {
+  display: block;
+
+  .context-bar {
+    background-color: @color-white;
+    border-bottom-color: @color-earl-grey;
+
+    &-breadcrumb {
+      color: @color-steel;
+
+      &> .breadcrumb-current {
+        color: @color-cobalt;
+      }
+    }
+    &-actions {
+      button {
+        border-color: @color-piston;
+        background-color: @color-white;
+        &:hover {
+          background-color: @color-smoke;
+        }
+        &.btn-disabled {
+          color: @color-cobalt;
+          background-color: @color-ghost;
+        }
+      }
+      .btn-disabled {
+        color: @color-cobalt;
+        background-color: @color-ghost;
+      }
+    }
+  }
+}

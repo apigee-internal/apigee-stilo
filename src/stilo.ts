@@ -14,13 +14,13 @@
  limitations under the License.
  */
 
-import {Color} from './color';
+import {Colors} from './colors';
+import {AppView} from './layout/appView';
 
-import './apigee.less'; // Needed for emit apigee.css
-import './apigee-base.less'; // Needed for emit apigee-base.css
+require('./apigee.less'); // Needed for emit apigee.css
+require('./apigee-base.less'); // Needed for emit apigee-base.css
 
 export class Stilo {
-    get colors(): Color[] {
-        return [];
-    };
+    public readonly appView: AppView = new AppView();
+    public readonly colors: Colors = new Colors();
 }

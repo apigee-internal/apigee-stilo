@@ -1,0 +1,87 @@
+@import "colors";
+@import "variables";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; padding: 0;
+}
+body {
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+}
+#ALM-sidebar {
+  z-index: 10;
+  border-right: 1px solid;
+}
+:host {
+  display: block;
+  min-width: @min-width;
+}
+.app-view {
+  display: block;
+
+  .context-bar {
+    height: 57px;
+    min-width: @min-width;
+    width: 100%;
+    z-index: 3;
+
+    &-breadcrumb {
+      margin: 15px 0px 0px 30px;
+      font-size: 18px;
+      font-weight: 300;
+      display: inline-block;
+
+      &> .glyphicon-file {
+        margin-right: 5px;
+      }
+
+      &> .breadcrumb-parent {
+        margin-right: 5px;
+      }
+
+      &> .breadcrumb-current {
+        margin-left: 5px;
+      }
+    }
+
+    &-actions {
+      float: right;
+      display: block;
+      margin: 10px 20px 0 0;
+      button {
+        border-radius: 0;
+        border: 1px solid;
+        position: relative;
+        .glyphicon {
+          font-size: 10px;
+          top: 0;
+        }
+        &.btn-disabled {
+          cursor: default;
+        }
+      }
+      .btn-disabled {
+        cursor: default;
+      }
+    }
+  }
+
+  .context-bar-buffer {
+    display: inline-block;
+    margin-bottom: 52px;
+    width: 100%;
+  }
+
+  .tooltip-fake {
+    position: absolute;
+    width: 106px;
+    height: 34px;
+    top: 0;
+    left: 0;
+  }
+}

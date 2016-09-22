@@ -17,6 +17,15 @@ const config = {
                 test: /\.ts$/,
                 loader: 'ts',
                 exclude: [nodeModulesPath]
+            },
+            {
+                test: /\.less$/,
+                loader: 'css2json!less',
+                exclude: [
+                    nodeModulesPath,
+                    path.resolve(pwd, './src/apigee.less'),
+                    path.resolve(pwd, './src/apigee-base.less')
+                ]
             }
         ]
     },
@@ -26,6 +35,11 @@ const config = {
     },
     resolve: {
         extensions: ['', '.ts', 'js']
+    },
+    resolveLoader: {
+        modulesDirectories: ["scripts/loaders", "web_loaders", "web_modules", "node_loaders", "node_modules"],
+        extensions: ["", ".webpack-loader.js", ".web-loader.js", ".loader.js", ".js"],
+        packageMains: ["webpackLoader", "webLoader", "loader", "main"]
     },
     plugns: []
 };
