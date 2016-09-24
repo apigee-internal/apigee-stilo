@@ -1,7 +1,7 @@
 const tools = require('./tools');
 
 const groupRx = /[^\{\}]*\{[^\}]*}/;
-const keyRx = /[^\s]+/;
+const keyRx = /[^,]+/;
 
 const splitKeyValue = s => {
     const idx = s.indexOf('{');

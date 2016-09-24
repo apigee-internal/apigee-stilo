@@ -2,10 +2,17 @@ const tools = require('./tools');
 
 const varRx = /^(@[^:]+):([^;]+);$/;
 
+const rename = s => s.trim()
+    .replace(/^@/, '')
+    .replace(/-[a-z]/g, s => s.substr(1).toUpperCase());
+
 const parseVar = s => {
     const matches = varRx.exec(s);
     if (!matches) { throw new Error (`Invalid variable declaration: ${s}`); }
-    return { key: matches[1].trim().replace(/@/, ''), value: matches[2].trim() };
+    return {
+        key: rename(matches[1]),
+        value: matches[2].trim()
+    };
 };
 
 const parseLess = source => tools

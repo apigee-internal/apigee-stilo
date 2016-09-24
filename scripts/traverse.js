@@ -8,7 +8,7 @@ const traverse = (path, onFile, onDir) => {
         fs.readdirSync(path).forEach((file,index) => {
             const curPath = path + "/" + file;
             if(fs.lstatSync(curPath).isDirectory()) { // recurse
-                traverse(curPath);
+                traverse(curPath, onFile, onDir);
             } else { // delete file
                 if(onFile) { onFile(curPath); }
             }

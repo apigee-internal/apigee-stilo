@@ -6,10 +6,10 @@ const autoprefixer = require('autoprefixer');
 
 conf.devtool = 'source-map';
 conf.entry = {
-    app: ['./src/stilo.ts']
+    app: ['./src/apigeeStyle.ts']
 };
 conf.output = {
-    filename: './build/stilo.js',
+    filename: './build/apigeeStyle.js',
     sourceMapFile: '[file].map'
 };
 

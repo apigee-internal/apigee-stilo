@@ -14,13 +14,20 @@
  limitations under the License.
  */
 
-import {Colors} from './colors';
-import {AppView} from './layout/appView';
+import {Rule, ICSS} from './css';
 
 require('./apigee.less'); // Needed for emit apigee.css
 require('./apigee-base.less'); // Needed for emit apigee-base.css
 
-export class Stilo {
-    public readonly appView: AppView = new AppView();
-    public readonly colors: Colors = new Colors();
+// Load color constants and expose them in an object:
+const colors = require('!lessVariables!./globals/colors.less');
+
+export interface IApigeeStyle {
+    readonly appView: Rule;
+    readonly colors: any;
 }
+
+export const apigeeStyle: IApigeeStyle = {
+    appView: new Rule('app-view', require('./appView.less') as ICSS[]),
+    colors: colors
+};
