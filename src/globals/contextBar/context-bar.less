@@ -1,39 +1,18 @@
-@import "variables";
-
-html, body {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-h1, h2, h3, h4, h5, h6 {
-  margin: 0; padding: 0;
-}
-body {
-  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 14px;
-}
-#ALM-sidebar {
-  z-index: 10;
-  border-right: 1px solid;
-}
-:host {
-  display: block;
-  min-width: @min-width;
-}
 .app-view {
-  display: block;
-
   .context-bar {
     height: 57px;
     min-width: @min-width;
     width: 100%;
     z-index: 3;
+    background-color: @color-white;
+    border-bottom-color: @color-earl-grey;
 
     &-breadcrumb {
       margin: 15px 0px 0px 30px;
       font-size: 18px;
       font-weight: 300;
       display: inline-block;
+      color: @color-steel;
 
       &> .glyphicon-file {
         margin-right: 5px;
@@ -45,6 +24,7 @@ body {
 
       &> .breadcrumb-current {
         margin-left: 5px;
+        color: @color-cobalt;
       }
     }
 
@@ -56,16 +36,26 @@ body {
         border-radius: 0;
         border: 1px solid;
         position: relative;
+        border-color: @color-piston;
+        background-color: @color-white;
+
         .glyphicon {
           font-size: 10px;
           top: 0;
         }
+        &:hover {
+          background-color: @color-smoke;
+        }
         &.btn-disabled {
           cursor: default;
+          color: @color-cobalt;
+          background-color: @color-ghost;
         }
       }
       .btn-disabled {
         cursor: default;
+        color: @color-cobalt;
+        background-color: @color-ghost;
       }
     }
   }
