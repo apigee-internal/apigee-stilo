@@ -48,5 +48,5 @@ proxy.on('error', function(e) {
 
 // And run the server
 app.listen(port, function () {
-    console.log('Node server running at port %s and Webpack Server running at por 8080.', port);
+    console.log('Node server running at port %s and Webpack Server running at port 8080.', port);
 });
