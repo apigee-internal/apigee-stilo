@@ -9,7 +9,9 @@ conf.entry = {
     app: ['./src/apigeeStyle.ts']
 };
 conf.output = {
-    filename: './build/apigeeStyle.js',
+    path: path.resolve(pwd, './build/'),
+    publicPath: '/build/',
+    filename: 'apigeeStyle.js',
     sourceMapFile: '[file].map'
 };
 
@@ -22,11 +24,15 @@ conf.ts = {
 conf.module.loaders = [
     {
         test: /apigee\.less$/,
-        loader: 'apigee-style!postcss-loader!less'
+        loader: 'style-emiter!postcss-loader!less'
     },
     {
         test: /apigee-base\.less$/,
-        loader: 'apigee-base-style!postcss-loader!less'
+        loader: 'style-emiter!postcss-loader!less'
+    },
+    {
+        test: /apigee-components\.less$/,
+        loader: 'style-emiter!postcss-loader!less'
     }
 ].concat(conf.module.loaders);
 

@@ -1,5 +1,3 @@
-
-
 {
   "compilerOptions": {
     "target": "es5",
@@ -12,12 +10,12 @@
     "noImplicitAny": false,
     "declaration": true,
     "rootDir": "src",
-    "outDir": "build",
+    "outDir": "/types",
     "lib": ["es6"]
   },
   "exclude": [
     "node_modules",
-    "src/color.spec.ts"
+    "src/css.spec.ts"
   ],
   "compileOnSave": false,
   "buildOnSave": false

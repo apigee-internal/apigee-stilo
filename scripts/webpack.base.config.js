@@ -24,7 +24,8 @@ const config = {
                 exclude: [
                     nodeModulesPath,
                     path.resolve(pwd, './src/apigee.less'),
-                    path.resolve(pwd, './src/apigee-base.less')
+                    path.resolve(pwd, './src/globals/apigee-base.less'),
+                    path.resolve(pwd, './src/components/apigee-components.less')
                 ]
             }
         ]

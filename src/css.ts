@@ -1,3 +1,5 @@
+import * as _ from 'lodash';
+
 export interface IStyle {
     [key: string]: string;
 }
@@ -13,17 +15,19 @@ const removeHost = (host: string, s: string) => {
     const hostClass = `.${host}`;
     const idx = s.indexOf(hostClass);
     if (idx >= 0) {
-        return s.substr(idx + hostClass.length).trim();
+        return `:host ${s.substr(idx + hostClass.length).trim()}`.trim();
     }
     return s;
 };
 
 const css2ng = (hostClass: string, css: ICSS) => {
     const keys = css.keys.map(k => removeHost(hostClass, k));
+    const classifier = keys.join(', ');
+    const rawStyles = _.map(css.style, (v, k) => `${k}: {v};`).join('');
     return {
-        classifier: keys.join(', '),
-        keys: css.keys,
-        raw: css.raw,
+        classifier: classifier,
+        keys: keys,
+        raw: `${classifier} {${rawStyles}}`,
         style: css.style
     };
 };
@@ -37,7 +41,7 @@ export class Rule {
         this._host = hostClass;
     }
 
-    get raw () { return this._css.raw; }
+    get raw () { return this._css.map(css => css.raw).join('\n'); }
 
-    get ngCss () { return this._css.map(css => css2ng(this._host, css)); }
+    get ngCss () { return this._css.map(css => css2ng(this._host, css).raw).join('\n'); }
 }

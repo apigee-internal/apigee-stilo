@@ -14,20 +14,21 @@
  limitations under the License.
  */
 
-import {Rule, ICSS} from './css';
+// import {Rule, ICSS} from './css';
 
 require('./apigee.less'); // Needed for emit apigee.css
-require('./apigee-base.less'); // Needed for emit apigee-base.css
+require('./globals/apigee-base.less'); // Needed for emit apigee-base.css
+require('./components/apigee-components.less'); // Needed for emit apigee-components.css
 
 // Load color constants and expose them in an object:
 const colors = require('!lessVariables!./globals/colors.less');
 
 export interface IApigeeStyle {
-    readonly appView: Rule;
+    // readonly appView: Rule;
     readonly colors: any;
 }
 
 export const apigeeStyle: IApigeeStyle = {
-    appView: new Rule('app-view', require('./appView.less') as ICSS[]),
+    // appView: new Rule('app-view', require('./appView.less') as ICSS[]),
     colors: colors
 };
