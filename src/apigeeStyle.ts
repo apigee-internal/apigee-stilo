@@ -52,6 +52,11 @@ require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-BoldItalic.woff');
 require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-BoldItalic.woff2');
 require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-BoldItalic.ttf');
 
+require('font-awesome/fonts/fontawesome-webfont.eot');
+require('font-awesome/fonts/fontawesome-webfont.woff');
+require('font-awesome/fonts/fontawesome-webfont.woff2');
+require('font-awesome/fonts/fontawesome-webfont.ttf');
+
 // Load color constants and expose them in an object:
 const colors = require('!lessVariables!./globals/colors.less');
 

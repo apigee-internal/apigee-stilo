@@ -30,8 +30,7 @@ const config = {
             },
             {
                 test: /\.(?:eot|ttf|woff|woff2)$/,
-                loader: 'copy-file',
-                exclude: [nodeModulesPath]
+                loader: 'copy-file'
             },
         ]
     },
