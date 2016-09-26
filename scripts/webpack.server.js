@@ -27,7 +27,7 @@ module.exports = function () {
         // We need to tell Webpack to serve our bundled application
         // from the build path. When proxying:
         // http://localhost:3000/build -> http://localhost:8080/build
-        publicPath: '/build/',
+        publicPath: '/css/',
 
         // Configure hot replacement
         hot: true,
