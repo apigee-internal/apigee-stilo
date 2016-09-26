@@ -45,5 +45,5 @@ jspm_packages
 *.iml
 
 # Build
-build
+/build
 *.tgz
