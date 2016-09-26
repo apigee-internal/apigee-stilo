@@ -5,38 +5,43 @@
     width: 100%;
     z-index: 3;
     background-color: @color-white;
-    border-bottom-color: @color-earl-grey;
+    border-bottom: 1px solid @color-earl-grey;
 
     &-breadcrumb {
       margin: 15px 0px 0px 30px;
-      font-size: 18px;
-      font-weight: 300;
+      font-size: 14px;
       display: inline-block;
       color: @color-steel;
+      line-height: 2;
 
       &> .glyphicon-file {
         margin-right: 5px;
       }
 
       &> .breadcrumb-parent {
-        margin-right: 5px;
+        margin-right: 3px;
       }
 
-      &> .breadcrumb-current {
-        margin-left: 5px;
+      &> .breadcrumb-current, .breadcrumb-active {
+        margin-left: 0;
         color: @color-cobalt;
+      }
+
+      &> .breadcrumb-current::before {
+        content: "/ ";
+        padding: 0 5px;
+        color: @color-piston;
       }
     }
 
     &-actions {
       float: right;
       display: block;
-      margin: 10px 20px 0 0;
+      margin: 12px 20px 0 0;
       button {
         border-radius: 0;
-        border: 1px solid;
         position: relative;
-        border-color: @color-piston;
+        border: 1px solid @color-piston;
         background-color: @color-white;
 
         .glyphicon {
@@ -64,13 +69,5 @@
     display: inline-block;
     margin-bottom: 52px;
     width: 100%;
-  }
-
-  .tooltip-fake {
-    position: absolute;
-    width: 106px;
-    height: 34px;
-    top: 0;
-    left: 0;
   }
 }
