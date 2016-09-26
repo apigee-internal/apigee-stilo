@@ -1,7 +1,6 @@
 const rename = s => s.replace(/\.less$/, '.css');
 
 module.exports = function (source, meta) {
-    const options = this.options;
     this.cacheable && this.cacheable();
 
     if(!this.emitFile) throw new Error('emitFile is required from module system');

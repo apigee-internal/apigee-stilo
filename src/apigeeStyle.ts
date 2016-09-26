@@ -16,9 +16,41 @@
 
 // import {Rule, ICSS} from './css';
 
+// Import and generate CSS files from Less
 require('./apigee.less'); // Needed for emit apigee.css
 require('./globals/apigee-base.less'); // Needed for emit apigee-base.css
 require('./components/apigee-components.less'); // Needed for emit apigee-components.css
+
+// Copy fonts
+require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Light.eot');
+require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Light.woff');
+require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Light.woff2');
+require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Light.ttf');
+
+require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-LightItalic.eot');
+require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-LightItalic.woff');
+require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-LightItalic.woff2');
+require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-LightItalic.ttf');
+//
+require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Regular.eot');
+require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Regular.woff');
+require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Regular.woff2');
+require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Regular.ttf');
+
+require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Italic.eot');
+require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Italic.woff');
+require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Italic.woff2');
+require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Italic.ttf');
+
+require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Bold.eot');
+require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Bold.woff');
+require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Bold.woff2');
+require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Bold.ttf');
+
+require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-BoldItalic.eot');
+require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-BoldItalic.woff');
+require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-BoldItalic.woff2');
+require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-BoldItalic.ttf');
 
 // Load color constants and expose them in an object:
 const colors = require('!lessVariables!./globals/colors.less');

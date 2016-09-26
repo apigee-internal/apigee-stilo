@@ -10,7 +10,7 @@ const config = {
             {
                 test: /\.ts$/,
                 loader: 'tslint'
-            }
+            },
         ],
         loaders: [
             {
@@ -27,7 +27,12 @@ const config = {
                     path.resolve(pwd, './src/globals/apigee-base.less'),
                     path.resolve(pwd, './src/components/apigee-components.less')
                 ]
-            }
+            },
+            {
+                test: /\.(?:eot|ttf|woff|woff2|md)$/,
+                loader: 'copy-file',
+                exclude: [nodeModulesPath]
+            },
         ]
     },
     tslint: {
