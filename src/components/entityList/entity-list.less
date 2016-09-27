@@ -1,0 +1,91 @@
+@import "actions";
+.app-view {
+  .alm-entity-list {
+    margin: @general-margin;
+    // modal
+    .modal-bold {
+      font-weight: 500;
+      color: @color-asphalt
+    }
+    // content
+    .flex-list {
+      color: @color-cobalt;
+      .list-headers {
+        display: flex;
+        font-size: 12px;
+        .header {
+          padding: 0 15px 8px;
+        }
+        .fa {
+        color: @color-aluminium;
+        }
+      }
+      .list-content {
+        max-height: calc(~"100vh - 180px");
+        border: 1px solid @color-earl-grey;
+        border-bottom: none; // Todo: this isn't needed in products SPA. Why? Product .row:last-child{border: none}?
+        background-color: @color-white;
+        position: relative;
+
+        .wrapper {
+          display: flex;
+        }
+        .row-name {
+          color: @color-asphalt;
+          font-weight: 500;
+        }
+        .row-selected {
+          background-color: @color-fog;
+        }
+
+        .element {
+          border-bottom: 1px solid @table-border-color;
+          cursor: pointer;
+          padding: 15px;
+          .hide-on-hover:hover {
+            display: none
+          }
+          .on-hover-show {
+            display: none;
+            position: relative;
+            .fa {
+              padding-right: 5px;
+            }
+          }
+          .on-hover-show:hover {
+            display: block;
+          }
+        }
+        .deleting {
+          border: 1px solid @table-border-color;
+          background-color: @color-steel-translucid;
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px @table-border-color;
+          * {
+            cursor: not-allowed;
+          }
+        }
+        .disable-delete {
+          height: 20px;
+          width: 20px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          cursor: default;
+        }
+        .disable-delete-icon {
+          color: lightgray;
+        }
+        .display-long-value {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          max-width: 100%;
+          display: block;
+          float: left;
+        }
+      }
+    }
+  }
+
+}

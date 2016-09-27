@@ -1,0 +1,39 @@
+.app-view {
+  .alm-entity-list {
+    .actions() {
+      width: 100%;
+      margin-bottom: @general-margin;
+      .filtering {
+        width: 300px;
+        float: left;
+      }
+    }
+    &-actions {
+      .actions;
+    }
+    .alm-table-top {
+      .actions;
+    }
+    .alm-pagination {
+      float: right;
+      &-text {
+        display: inline;
+        vertical-align: middle;
+        color: @color-tungsten;
+        font-weight: 300;
+        margin-right: 5px;
+      }
+      &-symbol {
+        color: @color-piston;
+        font-family: @fontAwesome;
+        &.backward::before {
+          content: '\f104';
+        }
+        &.forward::before {
+          content: '\f105';
+        }
+      }
+    }
+  }
+
+}

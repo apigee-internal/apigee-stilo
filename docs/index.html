@@ -17,7 +17,7 @@
 <div class="app-view">
     <div class="context-bar">
         <div class="context-bar-breadcrumb">
-            <span class="fa fa-file"></span>
+            <span class="fa fa-file breadcrumb-icon"></span>
             <span class="breadcrumb-parent">Apigee Stilo</span>
             <span class="breadcrumb-current">Styles</span>
         </div>
@@ -28,30 +28,16 @@
             </button>
         </div>
     </div>
-    <progress-bar>
-        <div class="progress-container empty">
-            <div class="progress-reporter empty" style="width: 100%;"></div>
-        </div>
-    </progress-bar>
-    <notification>
-        <div class="notification-container empty">
-            <div class="notification-content">
-                <div aria-hidden="true" class="close">x</div>
-                <div><span class="fa fa-alert"></span><span class="main-text"></span></div>
-                <div><span class="details-text">Click to see details and additional notifications (coming soon!)</span></div>
-            </div>
-        </div>
-    </notification>
-    <products-list>
-        <modal submitlabel="Delete" title="Delete Product?">
+    <div class="alm-entity-list">
+        <div submitlabel="Delete" title="Delete Product?">
             <div class="modal" role="dialog" tabindex="-1" style="display: none;">
                 <div class="modal-dialog">
-                    
+
                 </div>
             </div>
-        </modal>
-        <div class="list-controls">
-            <filtering class="filtering">
+        </div>
+        <div class="alm-table-top">
+            <div class="filtering">
                 <div class="input-group input-group-sm">
                     <div class="input-group-btn dropdown" dropdown="">
                         <button class="btn btn-default dropdown-toggle" dropdowntoggle="" id="single-button" type="button" aria-haspopup="true">
@@ -66,90 +52,98 @@
                             <li class="inner-item" role="menuitem"><a class="dropdown-item">Description</a></li>
                         </ul>
                     </div>
-                    <input class="form-control" type="text">
+                    <input class="form-control" type="text" />
                 </div>
-            </filtering>
-            <pagination>
-        <div class="alm-pagination">
-            <span class="alm-pagination-text">1 - 3 of 3</span>
-            <!--template bindings={}-->
-            <div class="btn-group" role="group">
-                <button class="alm-pagination-symbol btn btn-default btn-sm backward" disabled=""></button>
-                <button class="alm-pagination-symbol btn btn-default btn-sm forward" disabled=""></button>
             </div>
+            <div>
+                <div class="alm-pagination">
+                    <span class="alm-pagination-text">1 - 3 of 3</span>
+                    <!--template bindings={}-->
+                    <div class="btn-group" role="group">
+                        <button class="alm-pagination-symbol btn btn-default btn-sm backward"></button>
+                        <button class="alm-pagination-symbol btn btn-default btn-sm forward"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
         </div>
-    </pagination> <div class="clearfix"></div> </div> <list-headers>
-        <div style="width: 23%;">
-        <span class="header-title">DISPLAY NAME </span>
-        <span class="header-icon arrow-down">
-            </span>
-    </div><div style="width: 54%;">
-        <span class="header-title">DESCRIPTION </span>
-    </div><div style="width: 23%;">
-        <span class="header-title">MODIFIED </span>
-    </div>
-    </list-headers>
-        <scrollable-container class="products-list-container">
-            <div class="content-wrapper">
-                <row><div class="wrapper" toggleonhover="">
-                    <div class="element" style="width: 23%;">
-                        <span class="row-name display-long-value e2e-go-to-detail">Sandbox APIs</span>
-                    </div>
-                    <div class="element" style="width: 54%;">
-                        <span class="e2e-list-email display-long-value"></span>
-                    </div>
-                    <div class="element" style="width: 23%;">
-                        <div class="hide-on-hover" style="display: block;">
-                            <span>21 days ago</span>
-                        </div>
-                        <div class="show-on-hover row-actions" style="display: none;">
-                            <span aria-hidden="true" class="fa fa-wrench e2e-redirect-product"></span>
-                            <span aria-hidden="true" class="fa fa-trash e2e-delete-product"></span>
-                        </div>
-                    </div>
+        <div class="flex-list">
+            <div class="list-headers">
+                <div class="header" style="width: 23%;">
+                    <span class="header-title">DISPLAY NAME </span>
+                    <span class="fa fa-long-arrow-down"></span>
                 </div>
-                </row>
-                <row>
-                    <div class="wrapper" toggleonhover="">
-                        <div class="element" style="width: 23%;">
-                            <span class="row-name display-long-value e2e-go-to-detail">Sandbox APIs XL</span>
-                        </div>
-                        <div class="element" style="width: 54%;">
-                            <span class="e2e-list-email display-long-value">The sandbox APIs with a larger quota!</span>
-                        </div>
-                        <div class="element" style="width: 23%;">
-                            <div class="hide-on-hover" style="display: block;">
-                                <span>2 months ago</span>
-                            </div>
-                            <div class="show-on-hover row-actions" style="display: none;">
-                                <span aria-hidden="true" class="fa fa-wrench e2e-redirect-product"></span>
-                                <span aria-hidden="true" class="fa fa-trash e2e-delete-product"></span>
-                            </div>
-                        </div>
-                    </div>
-                </row>
-                <row>
-                    <div class="wrapper" toggleonhover="">
-                        <div class="element" style="width: 23%;">
-                            <span class="row-name display-long-value e2e-go-to-detail">travel-request-stream Product</span>
-                        </div>
-                        <div class="element" style="width: 54%;">
-                            <span class="e2e-list-email display-long-value">travel-request-stream Product</span>
-                        </div>
-                        <div class="element" style="width: 23%;">
-                            <div class="hide-on-hover" style="display: block;">
-                                <span>4 months ago</span>
-                            </div>
-                            <div class="show-on-hover row-actions" style="display: none;">
-                                <span aria-hidden="true" class="fa fa-wrench e2e-redirect-product"></span>
-                                <span aria-hidden="true" class="fa fa-trash e2e-delete-product"></span>
-                            </div>
-                        </div>
-                    </div>
-                </row>
+                <div class="header" style="width: 54%;">
+                    <span class="header-title">DESCRIPTION </span>
+                </div>
+                <div class="header" style="width: 23%;">
+                    <span class="header-title">MODIFIED </span>
+                </div>
             </div>
-        </scrollable-container>
-    </products-list>
+
+            <div class="list-content">
+                <div class="content-wrapper">
+                    <row><div class="wrapper" toggleonhover="">
+                        <div class="element" style="width: 23%;">
+                            <span class="row-name display-long-value e2e-go-to-detail">Sandbox APIs</span>
+                        </div>
+                        <div class="element" style="width: 54%;">
+                            <span class="e2e-list-email display-long-value"></span>
+                        </div>
+                        <div class="element" style="width: 23%;">
+                            <div class="hide-on-hover" style="display: block;">
+                                <span>21 days ago</span>
+                            </div>
+                            <div class="show-on-hover row-actions" style="display: none;">
+                                <span aria-hidden="true" class="fa fa-wrench e2e-redirect-product"></span>
+                                <span aria-hidden="true" class="fa fa-trash e2e-delete-product"></span>
+                            </div>
+                        </div>
+                    </div>
+                    </row>
+                    <row>
+                        <div class="wrapper row-selected" toggleonhover="">
+                            <div class="element" style="width: 23%;">
+                                <span class="row-name display-long-value e2e-go-to-detail">Sandbox APIs XL</span>
+                            </div>
+                            <div class="element" style="width: 54%;">
+                                <span class="e2e-list-email display-long-value">The sandbox APIs with a larger quota!</span>
+                            </div>
+                            <div class="element" style="width: 23%;">
+                                <div class="hide-on-hover" style="display: block;">
+                                    <span>2 months ago</span>
+                                </div>
+                                <div class="show-on-hover row-actions" style="display: none;">
+                                    <span aria-hidden="true" class="fa fa-wrench e2e-redirect-product"></span>
+                                    <span aria-hidden="true" class="fa fa-trash e2e-delete-product"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </row>
+                    <row>
+                        <div class="wrapper" toggleonhover="">
+                            <div class="element" style="width: 23%;">
+                                <span class="row-name display-long-value e2e-go-to-detail">travel-request-stream Product</span>
+                            </div>
+                            <div class="element" style="width: 54%;">
+                                <span class="e2e-list-email display-long-value">travel-request-stream Product</span>
+                            </div>
+                            <div class="element" style="width: 23%;">
+                                <div class="hide-on-hover" style="display: none;">
+                                    <span>4 months ago</span>
+                                </div>
+                                <div class="show-on-hover row-actions" style="display: block;">
+                                    <span aria-hidden="true" class="fa fa-wrench e2e-redirect-product"></span>
+                                    <span aria-hidden="true" class="fa fa-trash e2e-delete-product"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </row>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
 </body>
 </html>

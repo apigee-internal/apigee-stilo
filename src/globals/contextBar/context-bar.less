@@ -14,7 +14,7 @@
       color: @color-steel;
       line-height: 2;
 
-      &> .fa-file {
+      &> .breadcrumb-icon {
         margin-right: 5px;
       }
 
@@ -28,8 +28,9 @@
       }
 
       &> .breadcrumb-current::before {
-        content: "/ ";
-        padding: 0 5px;
+        content: "\f105";
+        font-family: @fontAwesome;
+        padding-right: 5px;
         color: @color-piston;
       }
     }
