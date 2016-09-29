@@ -2,6 +2,7 @@
 .app-view {
   .alm-entity-list {
     margin: @general-margin;
+    display: block;
     // modal
     .modal-bold {
       font-weight: 500;
@@ -29,6 +30,14 @@
 
         .wrapper {
           display: flex;
+          .row-actions {
+            .fa {
+              margin-right: 6px;
+            }
+            .fa:hover {
+              color: @color-tungsten;
+            }
+          }
         }
         .row-name {
           color: @color-asphalt;
@@ -40,7 +49,6 @@
 
         .element {
           border-bottom: 1px solid @table-border-color;
-          cursor: pointer;
           padding: 15px;
           .hide-on-hover:hover {
             display: none

@@ -57,6 +57,10 @@ require('font-awesome/fonts/fontawesome-webfont.woff');
 require('font-awesome/fonts/fontawesome-webfont.woff2');
 require('font-awesome/fonts/fontawesome-webfont.ttf');
 
+require('apigee-icons/fonts/apigee-icons.eot');
+require('apigee-icons/fonts/apigee-icons.woff');
+require('apigee-icons/fonts/apigee-icons.ttf');
+
 // Load color constants and expose them in an object:
 const colors = require('!lessVariables!./globals/colors.less');
 
