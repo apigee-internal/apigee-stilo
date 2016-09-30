@@ -20,37 +20,32 @@
 require('./apigee.less'); // Needed for emit apigee.css
 require('./globals/apigee-base.less'); // Needed for emit apigee-base.css
 require('./components/apigee-components.less'); // Needed for emit apigee-components.css
+require('!copy-file!apigee-icons/css/apigee-icons.css'); // Needed for emit apigee-components.css
 
 // Copy fonts
-require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Light.eot');
-require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Light.woff');
-require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Light.woff2');
-require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Light.ttf');
+require('lato-font/fonts/lato-light/lato-light.eot');
+require('lato-font/fonts/lato-light/lato-light.woff');
+require('lato-font/fonts/lato-light/lato-light.ttf');
 
-require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-LightItalic.eot');
-require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-LightItalic.woff');
-require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-LightItalic.woff2');
-require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-LightItalic.ttf');
-//
-require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Regular.eot');
-require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Regular.woff');
-require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Regular.woff2');
-require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Regular.ttf');
+require('lato-font/fonts/lato-light-italic/lato-light-italic.eot');
+require('lato-font/fonts/lato-light-italic/lato-light-italic.woff');
+require('lato-font/fonts/lato-light-italic/lato-light-italic.ttf');
 
-require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Italic.eot');
-require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Italic.woff');
-require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Italic.woff2');
-require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Italic.ttf');
+require('lato-font/fonts/lato-normal/lato-normal.eot');
+require('lato-font/fonts/lato-normal/lato-normal.woff');
+require('lato-font/fonts/lato-normal/lato-normal.ttf');
 
-require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Bold.eot');
-require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Bold.woff');
-require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Bold.woff2');
-require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-Bold.ttf');
+require('lato-font/fonts/lato-normal-italic/lato-normal-italic.eot');
+require('lato-font/fonts/lato-normal-italic/lato-normal-italic.woff');
+require('lato-font/fonts/lato-normal-italic/lato-normal-italic.ttf');
 
-require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-BoldItalic.eot');
-require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-BoldItalic.woff');
-require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-BoldItalic.woff2');
-require('./artifacts/Lato2OFLWeb/Lato/fonts/Lato-BoldItalic.ttf');
+require('lato-font/fonts/lato-bold/lato-bold.eot');
+require('lato-font/fonts/lato-bold/lato-bold.woff');
+require('lato-font/fonts/lato-bold/lato-bold.ttf');
+
+require('lato-font/fonts/lato-bold-italic/lato-bold-italic.eot');
+require('lato-font/fonts/lato-bold-italic/lato-bold-italic.woff');
+require('lato-font/fonts/lato-bold-italic/lato-bold-italic.ttf');
 
 require('font-awesome/fonts/fontawesome-webfont.eot');
 require('font-awesome/fonts/fontawesome-webfont.woff');
