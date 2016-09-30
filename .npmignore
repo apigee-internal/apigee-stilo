@@ -52,6 +52,5 @@ jspm_packages
 *.tgz
 
 # Sources
-src
 scripts
 docs
