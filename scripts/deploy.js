@@ -24,7 +24,6 @@ if (!(accessKeyId && secretAccessKey && bucket && region && basePath)) {
 }
 
 const onBranch = function (path, callback) {
-    console.log(process.argv);
     const p = process.argv.filter(p => p.startsWith('--branch'));
     if (!p || p.length === 0) {
         callback(new Error('No branch specified'));
@@ -36,14 +35,6 @@ const onBranch = function (path, callback) {
         return;
     }
     callback(null, b.trim());
-    // exec = require('child_process').exec;
-    // exec('git rev-parse --abbrev-ref HEAD', {cwd: path}, function (error, stdout, stderr) {
-    //     if (error) {
-    //         callback(error, stderr.trim());
-    //         return;
-    //     }
-    //     callback(null, stdout.trim());
-    // });
 };
 
 onBranch('.', (error, branch) => {
