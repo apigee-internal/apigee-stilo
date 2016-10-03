@@ -41,7 +41,7 @@ onBranch('.', (error, branch) => {
     }
     // We only deploy if the branch is master or develop
     if (branch !== MASTER && branch !== DEVELOP) {
-        console.log('No deployment done.');
+        console.log('No deployment done. Current branch is ' + branch);
         process.exit(0);
     }
     const suffix = (branch === MASTER) ? version : 'beta';
