@@ -24,6 +24,7 @@ if (!(accessKeyId && secretAccessKey && bucket && region && basePath)) {
 }
 
 const onBranch = function (path, callback) {
+    console.log(process.argv);
     const p = process.argv.filter(p => p.startsWith('--branch'));
     if (!p || p.length === 0) {
         callback(new Error('No branch specified'));
