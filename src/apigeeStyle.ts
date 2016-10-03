@@ -20,7 +20,7 @@
 require('./apigee.less'); // Needed for emit apigee.css
 require('./globals/apigee-base.less'); // Needed for emit apigee-base.css
 require('./components/apigee-components.less'); // Needed for emit apigee-components.css
-require('!copy-file!apigee-icons/css/apigee-icons.css'); // Needed for emit apigee-components.css
+// require('!copy-file!apigee-icons/css/apigee-icons.css'); // Needed for emit apigee-components.css
 
 // Copy fonts
 require('lato-font/fonts/lato-light/lato-light.eot');
