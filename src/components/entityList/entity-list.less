@@ -33,9 +33,14 @@
           .row-actions {
             .fa {
               margin-right: 6px;
+              color: @color-cobalt;
             }
-            .fa:hover {
-              color: @color-tungsten;
+            .fa.disabled {
+              color: @color-aluminium;
+            }
+            .fa:not(.disabled):hover {
+              color: @color-asphalt;
+              cursor: pointer;
             }
           }
           &-collapsed-row:hover {
