@@ -60,8 +60,32 @@ The library is compiled against ES5 but will relay on some polyfills. It is reco
 
 The CSS files can be used pretty much anywhere you can use CSS. JS files are compiled to be used on build environments like Webpack.
 
+## Contributing
+
+Pull requests are welcome! Please create a new feature branch for each change. 
+
+### Getting Started
+
+Getting started is easy! Clone the project, then:
+
+1. `$ npm install` to install dependencies
+2. `$ npm start` to start the project
+3. Browse to `http://localhost:3000` to view
+
+### Adding & Updating Styles
+
+Styles are broken down into two categories: 
+
+- *Elements* are simple interface controls with a single purpose; they cannot be further subdivided. Examples: buttons, toggles, input boxes.
+- *Patterns* are composites of multiple elements or patterns; they look and feel unique to Apigee. Examples: context bar, forms, list views, detail views.
+
+When editing styles, look in either `src/components/elements` or `src/components/patterns` for the style you want to edit. Keeping one file per component helps maintain order and maximize flexibility.
+
+If you need to add new patterns or elements, create new Less files for each and add them to the applicable folder(s). You will then need to `@import` your new style(s) in `src/apigee.less`.
 
 - - -
+
+## License
 
 Copyright 2016 Apigee Corporation
 
