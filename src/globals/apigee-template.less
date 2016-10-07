@@ -10,11 +10,16 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family: Lato, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.5px;
   color: @color-tungsten;
   background-color: @color-smoke;
-  font-smoothing: antialiased;
+  font-kerning: auto;
+}
+
+code, pre {
+  font-smoothing: subpixel-antialiased;
+  letter-spacing: 0px;
 }
 
 #ALM-sidebar {
