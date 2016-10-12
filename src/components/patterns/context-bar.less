@@ -7,37 +7,46 @@
     background-color: @color-white;
     border-bottom: 1px solid @color-earl-grey;
 
-    &-breadcrumb {
-      margin: 15px 0px 0px 30px;
-      font-size: 14px;
-      display: inline-block;
-      color: @color-steel;
-      line-height: 2;
+    & > ol.breadcrumb {
+        display: inline-block;
+        background-color: @color-white;
+        padding-right: 20px;
+        padding: 18px 20px;
+        margin-bottom: 0px;
+        list-style: none;
+        border-radius: 0px;
 
-      &> .breadcrumb-icon {
-        margin-right: 5px;
-      }
+        & > li {
+            display: inline-block;
 
-      &> .breadcrumb-parent {
-        margin-right: 3px;
-      }
+            & > a {
+              padding-bottom: 10px;
+              color: @color-steel;
+            }
 
-      &> .breadcrumb-current, .breadcrumb-active {
-        margin-left: 0;
-        color: @color-cobalt;
-      }
+            & > a:hover {
+                padding-bottom: 10px;
+                color: @color-asphalt;
+                text-decoration: none;
+                border-bottom: 1px solid @color-asphalt;
+            }
+        }
 
-      &> .breadcrumb-current::before {
-        content: "\f105";
-        font-family: @fontAwesome;
-        padding-right: 5px;
-        color: @color-piston;
-      }
+        & > li + li::before {
+          padding: 0 14px 0 10px;
+          vertical-align: middle;
+          color: #ccc;
+          content: "\f106";
+          color: @color-earl-grey;
+          font-family: @font-apigee-icons;
+          font-size: 16px;
+        }
     }
 
     &-actions {
       float: right;
       display: block;
+      position: relative;
       margin: 12px 20px 0 0;
       button {
         border-radius: 0;
