@@ -54,6 +54,10 @@ require('apigee-icons/fonts/apigee-icons.eot');
 require('apigee-icons/fonts/apigee-icons.woff');
 require('apigee-icons/fonts/apigee-icons.ttf');
 
+require('@typopro/web-oxygen/TypoPRO-OxygenMono-Regular.eot');
+require('@typopro/web-oxygen/TypoPRO-OxygenMono-Regular.ttf');
+require('@typopro/web-oxygen/TypoPRO-OxygenMono-Regular.woff');
+
 // Load color constants and expose them in an object:
 const colors = require('!lessVariables!./globals/colors.less');
 

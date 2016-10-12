@@ -1,6 +1,6 @@
 {
   "name": "apigee-stilo",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Apigee Styles library to be used by SPAs with Webpack and Typescript or as a raw CSS dependency",
   "main": "index.js",
   "scripts": {
@@ -26,6 +26,7 @@
   "author": "Oscar Ponce",
   "license": "Apache-2.0",
   "devDependencies": {
+    "@typopro/web-oxygen": "^3.4.9",
     "apigee-icons": "git+https://github.com/apigee-internal/apigee-icons.git#v1.0.2",
     "autoprefixer": "6.4.1",
     "bootstrap": "3.3.7",
