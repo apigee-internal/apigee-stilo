@@ -26,6 +26,7 @@
   "author": "Oscar Ponce",
   "license": "Apache-2.0",
   "devDependencies": {
+    "@typopro/web-oxygen": "^3.4.9",
     "apigee-icons": "git+https://github.com/apigee-internal/apigee-icons.git#v1.0.2",
     "autoprefixer": "6.4.1",
     "bootstrap": "3.3.7",
