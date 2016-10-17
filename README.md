@@ -90,7 +90,7 @@ If you need to add new patterns or elements, create new Less files for each and 
 Copyright 2016 Apigee Corporation
 
 Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this software in compliance with the License.
+you may not use this software except in compliance with the License.
 You may obtain a copy of the License at
 
 <http://www.apache.org/licenses/LICENSE-2.0>
