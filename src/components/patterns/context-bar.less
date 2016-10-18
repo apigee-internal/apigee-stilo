@@ -38,13 +38,19 @@
         }
 
         & > li + li::before {
-          padding: 0 14px 0 10px;
-          vertical-align: middle;
-          color: #ccc;
-          content: "\f106";
-          color: @color-earl-grey;
-          font-family: @font-apigee-icons;
-          font-size: 16px;
+          border-style: solid;
+          border-width: 1px 1px 0 0;
+          content: '';
+          display: inline-block;
+          height: 11px;
+          position: relative;
+          top: 5.5px;
+          vertical-align: top;
+          width: 8px;
+          transform: scale(0.75, 1) rotate(45deg);
+          color: #eaebec;
+          margin-right: 20px;
+          margin-left: 12px;
         }
     }
 
