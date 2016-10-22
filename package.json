@@ -1,6 +1,6 @@
 {
   "name": "apigee-stilo",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Apigee Styles library to be used by SPAs with Webpack and Typescript or as a raw CSS dependency",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,7 @@
     "Styles"
   ],
   "author": "Oscar Ponce",
+  "contributors": [ "Brandon Shelley", "Nate Starun" ],
   "license": "Apache-2.0",
   "devDependencies": {
     "@typopro/web-oxygen": "^3.4.9",
