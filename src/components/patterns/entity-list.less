@@ -10,48 +10,66 @@
     }
     // content
     .flex-list {
-      color: @color-cobalt;
+      color: @color-asphalt;
       .list-headers {
         display: flex;
         font-size: 12px;
+        .header-title {
+          color: @color-cobalt;
+          letter-spacing: 1px;
+          font-weight: normal;
+        }
         .header {
           padding: 0 15px 8px;
         }
-        .fa {
-        color: @color-aluminium;
+        .fa, .arrow-up, .arrow-down {  // todo arrow up and arrow down classes from ng2-ue-utils, remove when possible
+        color: @color-cobalt;
         }
       }
       .list-content {
         max-height: calc(~"100vh - 180px");
-        border: 1px solid @color-earl-grey;
+        border: 1px solid @color-piston;
+        border-radius: 3px;
         border-bottom: none; // Todo: this isn't needed in products SPA. Why? Product .row:last-child{border: none}?
         background-color: @color-white;
         position: relative;
-
+        .content-wrapper {
+          & > *:last-child {
+            border-bottom: 1px solid @color-piston;
+            border-radius: 3px;
+            .element {
+                border-bottom: none;
+            }
+          }
+        }
         .wrapper {
           display: flex;
           .row-actions {
-            .fa {
+            .fa, 
+            .apigee-icon {
               margin-right: 6px;
               color: @color-cobalt;
             }
-            .fa.disabled {
+            .fa.disabled, 
+            .apigee-icon.disabled {
               color: @color-aluminium;
             }
-            .fa:not(.disabled):hover {
+            .fa:not(.disabled):hover,
+            .apigee-icon:not(.disabled):hover{
               color: @color-asphalt;
               cursor: pointer;
             }
           }
           &-collapsed-row:hover {
             cursor: pointer;
-            background-color: @color-fog;
+            background-color: @color-ghost;
+            transition: all 150ms;
           }
         }
-        .row-name {
-          color: @color-asphalt;
-          font-weight: 500;
-        }
+        //.row-name { // we are removing distinguishing styles on `name` field in favor of readability 
+        //  color: @color-asphalt;
+        //  font-weight: 500;
+        //}
         .row-selected {
           background-color: @color-fog;
         }
