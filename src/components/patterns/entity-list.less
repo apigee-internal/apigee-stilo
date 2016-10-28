@@ -28,15 +28,12 @@
       }
       .list-content {
         max-height: calc(~"100vh - 180px");
-        border: 1px solid @color-piston;
-        border-radius: 3px;
-        border-bottom: none; // Todo: this isn't needed in products SPA. Why? Product .row:last-child{border: none}?
         background-color: @color-white;
         position: relative;
         .content-wrapper {
+          border: 1px solid @color-piston;
+          border-radius: 3px;
           & > *:last-child {
-            border-bottom: 1px solid @color-piston;
-            border-radius: 3px;
             .element {
                 border-bottom: none;
             }
