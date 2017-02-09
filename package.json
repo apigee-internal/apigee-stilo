@@ -1,6 +1,6 @@
 {
   "name": "apigee-stilo",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Apigee Styles library to be used by SPAs with Webpack and Typescript or as a raw CSS dependency",
   "main": "index.js",
   "scripts": {
