@@ -1,11 +1,11 @@
 {
   "name": "apigee-stilo",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Apigee Styles library to be used by SPAs with Webpack and Typescript or as a raw CSS dependency",
   "main": "index.js",
   "scripts": {
     "clean": "node ./scripts/clean.js",
-    "postinstall": "typings install",
+    "install:typings": "typings install",
     "copy:build": "cp -r build/ docs/css/",
     "build:wp": "webpack --config ./scripts/webpack.build.conf.js -p",
     "build": "npm run clean && npm run build:wp && npm run copy:build",
