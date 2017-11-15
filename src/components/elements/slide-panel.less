@@ -1,0 +1,36 @@
+.ue-detail-panel-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0;
+  z-index: 1040;
+  transition: opacity 200ms ease;
+}
+
+.ue-detail-panel-open .ue-detail-panel-backdrop {
+  opacity: 0.5;
+}
+
+.ue-detail-panel {
+  display: block;
+  width: calc(100VW);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 100%;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  transition: all 200ms ease;
+  will-change: transform;
+  background-color: #eeeeef;
+}
+
+.ue-detail-panel-open .ue-detail-panel {
+  transform: translate3d(-80%, 0, 0);
+}
